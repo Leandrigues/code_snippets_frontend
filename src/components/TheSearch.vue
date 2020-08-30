@@ -38,8 +38,8 @@ export default {
 .search-input {
   border: solid 1px lightgrey;
   font-family: 'Source Sans Pro', sans-serif;
-  transition: border 0.4s;
-  @apply m-0 text-lg flex items-center pl-8 py-1 w-1/2 rounded-full;
+  transition: border 0.3s;
+  @apply m-0 text-lg flex items-center pl-8 py-1 w-64 rounded-md;
 }
 
 .search-input:focus {

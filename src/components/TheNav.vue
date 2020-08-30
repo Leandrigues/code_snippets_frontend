@@ -2,7 +2,6 @@
   <nav class="nav-container">
     <div class="nav-section">
       <div class="logo">CodeSnippets</div>
-      <TheSearch/>
     </div>
     <div class="sign-buttons-container">
       <div class="sign-in-button">Sign in</div>
@@ -12,11 +11,9 @@
 </template>
 
 <script>
-import TheSearch from "@/components/TheSearch"
 
 export default {
   components: {
-    TheSearch
   }
 }
 </script>
@@ -54,6 +51,6 @@ export default {
 
 .sign-in-button {
   font-family: 'Roboto Slab', serif;
+  @apply cursor-pointer;
 }
-
 </style>
