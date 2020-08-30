@@ -1,7 +1,5 @@
 <template>
-  <div id="search-container">
-      <p id="search-text">Search snippets</p>
-  </div>
+  <input class="search-container" type="text" placeholder="Search snippet">
 </template>
 
 <script>
@@ -12,19 +10,19 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
-#search-text {
-    margin: 0;
-    /* font-family: 'Lato', sans-serif; */
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.95rem;
+
+.search-container {
+  border: solid 1px lightgrey;
+  font-family: 'Source Sans Pro', sans-serif;
+  @apply m-0 text-sm flex items-center px-2 py-1 w-32 rounded-full;
 }
 
-#search-container {
-    display: flex;
-    align-items: center;
-    border: solid 1px lightgrey;
-    padding: 0.3rem 0.9rem;
-    width: 8rem;
-    border-radius: 20px;
+.search-container:focus {
+  outline:none;
+
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 </style>

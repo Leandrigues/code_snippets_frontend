@@ -1,10 +1,10 @@
 <template>
-  <nav id="nav-container">
-    <div id="logo">CodeSnippets</div>
+  <nav class="nav-container">
+    <div class="logo">CodeSnippets</div>
     <TheSearch/>
-    <div id="sign-buttons-container">
-      <div id="sign-in-button">Sign in</div>
-      <div id="sign-up-button">Sign up</div>
+    <div class="sign-buttons-container">
+      <div class="sign-in-button">Sign in</div>
+      <div class="sign-up-button">Sign up</div>
     </div>
   </nav>
 </template>
@@ -23,35 +23,26 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
-#nav-container {
-  display: flex;
-  align-items: center;
-  padding: 0 1.5rem;
-  border-bottom: solid 1px rgb(231, 231, 231);
-  height: 4rem;
-  width: 100%;
+.nav-container {
+  @apply flex items-center border-b h-16 w-full px-6;
 }
 
-#logo {
-  flex-grow: 10;
+.logo {
+  flex-grow: 1;
   font-family: 'Roboto Slab', serif;
 }
 
-#sign-buttons-container {
-  display: flex;
-  align-items: center;
-  width: 10rem;
+.sign-buttons-container {
+  @apply flex items-center w-40;
 }
 
-#sign-up-button {
+.sign-up-button {
   font-family: 'Roboto Slab', serif;
   background-color: #f1a9e2;
-  padding: 0.7rem;
-  color: white;
-  border-radius: 4px;
+  @apply p-3 text-white rounded;
 }
 
-#sign-in-button {
+.sign-in-button {
   font-family: 'Roboto Slab', serif;
 }
 

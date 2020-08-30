@@ -16,8 +16,7 @@ export default {
 </script>
 <style>
 html, body {
-  margin: 0;
-  padding: 0;
+  @apply m-0 p-0;
 }
 
 #app {
