@@ -1,10 +1,16 @@
 <template>
-  <input class="search-container" type="text" placeholder="Search snippet">
+  <transition name="fade">
+    <input class="search-container" type="text" placeholder="Search a snippet">
+  </transition>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      inputActive: false
+    }
+  }
 }
 </script>
 
@@ -14,12 +20,13 @@ export default {
 .search-container {
   border: solid 1px lightgrey;
   font-family: 'Source Sans Pro', sans-serif;
-  @apply m-0 text-sm flex items-center px-2 py-1 w-32 rounded-full;
+  transition: border 0.4s;
+  @apply m-0 text-lg italic flex items-center px-4 py-1 w-1/4 rounded-full;
 }
 
 .search-container:focus {
   outline:none;
-
+  border: solid 1px #3a6ead;
 }
 
 input:focus::placeholder {

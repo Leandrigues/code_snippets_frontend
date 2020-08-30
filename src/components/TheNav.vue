@@ -24,22 +24,27 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
 .nav-container {
-  @apply flex items-center border-b h-16 w-full px-6;
+  @apply flex justify-between items-center border-b h-20 w-full px-6;
 }
 
 .logo {
-  flex-grow: 1;
   font-family: 'Roboto Slab', serif;
+  @apply text-lg;
 }
 
 .sign-buttons-container {
-  @apply flex items-center w-40;
+  @apply flex items-center justify-between w-40;
 }
 
 .sign-up-button {
   font-family: 'Roboto Slab', serif;
-  background-color: #f1a9e2;
-  @apply p-3 text-white rounded;
+  background-color: #2a5890;
+  transition: background-color 0.4s;
+  @apply py-3 px-4 cursor-pointer text-white rounded;
+}
+
+.sign-up-button:hover {
+  background-color:#3a6ead;
 }
 
 .sign-in-button {
