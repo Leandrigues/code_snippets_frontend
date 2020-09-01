@@ -24,7 +24,14 @@ export default {
 </script>
 <style>
 html, body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   @apply m-0 p-0 h-full;
+
 }
 
 #app {

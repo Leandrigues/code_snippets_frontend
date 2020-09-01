@@ -16,6 +16,6 @@ export default {
 
 <style>
 .main-container {
-  @apply pt-5 w-full h-full border-r;
+  @apply pt-8 px-10 w-full h-full border-r;
 }
 </style>

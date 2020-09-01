@@ -23,12 +23,13 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
 .nav-container {
-  @apply flex justify-between items-center border-b h-20 w-full px-6;
+  @apply flex justify-between items-center border-b h-20 w-full px-16;
 }
 
 .nav-section {
   @apply flex w-full items-center;
 }
+
 .logo {
   font-family: 'Roboto Slab', serif;
   @apply text-lg w-32;
@@ -40,13 +41,13 @@ export default {
 
 .sign-up-button {
   font-family: 'Roboto Slab', serif;
-  background-color: #2a5890;
+  background-color: #0D3B66;
   transition: background-color 0.4s;
   @apply py-3 px-4 cursor-pointer text-white rounded;
 }
 
 .sign-up-button:hover {
-  background-color:#3a6ead;
+  background-color:#0D3B66;
 }
 
 .sign-in-button {
