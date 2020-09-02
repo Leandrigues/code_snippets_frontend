@@ -23,7 +23,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 .search-container {
-  @apply w-1/3 ml-5;
+  @apply w-1/3;
 }
 
 .search-form {

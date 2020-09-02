@@ -35,7 +35,7 @@ export default {
 .side-bar-container {
   min-width: 23rem;
   width: 24%;
-  @apply h-full border-r px-10 py-8;
+  @apply h-full border-r px-10 py-10;
 }
 
 .categories {
