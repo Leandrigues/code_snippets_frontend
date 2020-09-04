@@ -45,16 +45,20 @@ export default {
 }
 
 .categorie {
-  color: #0D3B66;
   background-color: transparent;
   transition: background-color .3s;
-  @apply py-3 pl-5 rounded-full;
+  @apply py-3 pl-5 text-mainNavyBlue rounded-full;
+}
+
+.non-selected:hover{
+  /* background-color: #07BEB8; */
+  background-color: rgb(7, 190, 184, 0.2)
+  
 }
 
 .selected.categorie {
-  background-color: #0D3B66;
   color: white;
-  @apply py-3 pl-5 rounded-full;
+  @apply py-3 pl-5 bg-mainNavyBlue rounded-full;
 }
 
 .non-selected {

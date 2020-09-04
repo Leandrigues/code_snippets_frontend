@@ -41,13 +41,13 @@ export default {
 
 .sign-up-button {
   font-family: 'Roboto Slab', serif;
-  background-color: #0D3B66;
   transition: background-color 0.4s;
-  @apply py-3 px-4 cursor-pointer text-white rounded;
+  @apply py-3 px-4 cursor-pointer text-white rounded bg-mainNavyBlue;
+  background-color: #ed7b84;
 }
 
 .sign-up-button:hover {
-  background-color:#0D3B66;
+  @apply bg-mainNavyBlue;
 }
 
 .sign-in-button {
