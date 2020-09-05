@@ -51,17 +51,16 @@ export default {
 }
 
 .non-selected:hover{
-  /* background-color: #07BEB8; */
   background-color: rgb(7, 190, 184, 0.2)
   
 }
 
 .selected.categorie {
   color: white;
-  @apply py-3 pl-5 bg-mainNavyBlue rounded-full;
+  @apply bg-mainNavyBlue rounded-full;
 }
 
 .non-selected {
-  margin-left: 9px;
+  /* margin-left: 9px; */
 }
 </style>

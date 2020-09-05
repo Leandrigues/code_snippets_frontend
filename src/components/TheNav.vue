@@ -4,8 +4,8 @@
       <div class="logo">CodeSnippets</div>
     </div>
     <div class="sign-buttons-container">
-      <div class="sign-in-button">Sign in</div>
-      <div class="sign-up-button">Sign up</div>
+      <v-btn text large color="#326273" class="sign-in-button">Sign in</v-btn>
+      <v-btn depressed large color="#326273" class="white--text sign-up-button">Sign up</v-btn>
     </div>
   </nav>
 </template>
@@ -36,14 +36,12 @@ export default {
 }
 
 .sign-buttons-container {
-  @apply flex items-center justify-around w-48;
+  @apply flex items-center justify-between w-56;
 }
 
 .sign-up-button {
   font-family: 'Roboto Slab', serif;
-  transition: background-color 0.4s;
-  @apply py-3 px-4 cursor-pointer text-white rounded bg-mainNavyBlue;
-  background-color: #ed7b84;
+  outline: none;
 }
 
 .sign-up-button:hover {
@@ -52,6 +50,8 @@ export default {
 
 .sign-in-button {
   font-family: 'Roboto Slab', serif;
+  outline: none;
+
   @apply cursor-pointer;
 }
 </style>

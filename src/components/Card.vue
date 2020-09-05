@@ -1,24 +1,19 @@
 <template>
   <div class="card-container">
-
       <div class="code-thumb"></div>
-        <div id="teste">
-
-        </div>
       <div class="card-bottom">
-        <p class="title">There is some title here</p>
+        <p class="card-title">{{title}}</p>
+        <p class="card-description">{{description}}</p>
+        <p class=""> </p>
       </div>
   </div>
 </template>
 
 <script>
-// import CodeHighlight from "vue-code-highlight/src/CodeHighlight.vue";
-import "vue-code-highlight/themes/duotone-sea.css";
-import "vue-code-highlight/themes/window.css";
 export default {
   components: {
-    // CodeHighlight
   },
+  props: ["title", "description", "tags"],
   data() {
     return {
       sourcecode: `function code() {
@@ -29,36 +24,42 @@ export default {
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
-#teste {
-  position: absolute;
-  width: 10rem;
-}
-
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 .card-container {
-  @apply flex flex-col justify-center h-64 w-56 mr-10;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
+  width: 20rem;
+  height: 21rem;
+  @apply flex flex-col  mb-10 rounded-md;
+
 }
 
 .code-thumb {
   background-color: rgb(42, 42, 42);
-  @apply h-40 w-full rounded-t-md;
+  @apply h-56 w-full rounded-t-md;
 }
 
-.title {
+.card-title {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 0.9rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+
 } 
 
-.javascript {
+.card-bottom {
+  @apply h-24 w-full pt-2 px-4 rounded-b-md;
 }
 
-.card-bottom {
-  border-left: solid 1px rgb(223, 223, 223);
-  border-right: solid 1px rgb(223, 223, 223);
-  border-bottom: solid 1px rgb(223, 223, 223);
-  @apply h-20 w-full rounded-b-md pt-2 px-2;
+.card-description {
+  font-size: 0.9rem;
+  color: rgb(83, 83, 83);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
