@@ -23,11 +23,11 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
 .nav-container {
-  @apply flex justify-between items-center border-b h-20 w-full px-16;
+  @apply flex justify-between items-center border-b w-full px-16;
 }
 
 .nav-section {
-  @apply flex w-full items-center;
+  @apply flex w-full h-20 items-center;
 }
 
 .logo {

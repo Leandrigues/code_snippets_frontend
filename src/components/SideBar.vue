@@ -17,31 +17,31 @@ export default {
       categories: [
         {
           name: "Algorithms",
-          icon: "001-structure"
+          icon: "structure"
         },
         {
           name: "Database",
-          icon: "002-server"
+          icon: "database"
         },
         {
           name: "Data Structures",
-          icon: "001-structure"
+          icon: "structure"
         },
         {
           name: "Front-end",
-          icon: "001-structure"
+          icon: "front"
         },
         {
           name: "Git ignore",
-          icon: "004-git"
+          icon: "git"
         },
         {
           name: "Interview",
-          icon: "001-structure"
+          icon: "interview"
         },
         {
           name: "Regex",
-          icon: "001-structure"
+          icon: "regex"
         },       
       ],
       selected: 0
@@ -94,7 +94,7 @@ export default {
 }
 
 img {
-  @apply mr-4
+  @apply flex items-center mr-4
 }
 
 </style>

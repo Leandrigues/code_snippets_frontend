@@ -24,9 +24,7 @@ export default {
 </script>
 <style>
 html, body {
-
   @apply m-0 p-0 h-full;
-
 }
 
 #app {
@@ -34,6 +32,6 @@ html, body {
 }
 
 .content {
-  @apply flex h-full
+  @apply flex;
 }
 </style>
