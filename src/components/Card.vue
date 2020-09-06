@@ -31,7 +31,7 @@ export default {
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
-  width: 20rem;
+  width: 22.5rem;
   height: 21rem;
   @apply flex flex-col  mb-10 rounded-md;
 
