@@ -17,7 +17,7 @@ export default {
       categories: [
         {
           name: "Algorithms",
-          icon: "structure"
+          icon: "algorithm"
         },
         {
           name: "Database",
