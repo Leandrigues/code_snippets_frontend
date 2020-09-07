@@ -43,10 +43,12 @@ export default {
 
 <style>
 .main-container {
-  @apply px-16 pt-10 w-full h-full border-r;
+  @apply px-32 pt-10 w-full h-full border-r;
 }
 
 .cards {
-  @apply flex justify-between flex-wrap w-full mt-10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @apply mt-10
 }
 </style>

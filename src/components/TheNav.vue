@@ -4,8 +4,8 @@
       <div class="logo">CodeSnippets</div>
     </div>
     <div class="sign-buttons-container">
-      <v-btn text large color="#326273" class="sign-in-button">Sign in</v-btn>
-      <v-btn depressed large color="#326273" class="white--text sign-up-button">Sign up</v-btn>
+      <v-btn text large class="sign-in-button">Sign in</v-btn>
+      <v-btn depressed large color="#F87060" class="white--text sign-up-button">Sign up</v-btn>
     </div>
   </nav>
 </template>
@@ -32,7 +32,7 @@ export default {
 
 .logo {
   font-family: 'Roboto Slab', serif;
-  @apply text-lg w-32;
+  @apply text-xl w-32;
 }
 
 .sign-buttons-container {

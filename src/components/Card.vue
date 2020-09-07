@@ -31,9 +31,9 @@ export default {
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
-  width: 22.5rem;
   height: 21rem;
-  @apply flex flex-col  mb-10 rounded-md;
+  width: 90%;
+  @apply flex flex-col mb-10 rounded-md;
 
 }
 
@@ -44,14 +44,14 @@ export default {
 
 .card-title {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
   font-size: 1.5rem;
-  margin: 0;
+  @apply m-0 font-bold;
 
 } 
 
 .card-bottom {
-  @apply h-24 w-full pt-2 px-4 rounded-b-md;
+
+  @apply h-32 w-full pt-2 px-4 rounded-b-md;
 }
 
 .card-description {
