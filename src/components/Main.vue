@@ -2,7 +2,7 @@
   <section class="main-container">
     <TheSearch/>
     <div class="cards">
-      <Card v-for="card in cards" :key="card.title" :title="card.title" :description="card.description"/>
+      <Card v-for="card in cards" :key="card.title" :title="card.title" :description="sliceDescription(card.description)" :likes="card.likes" :details="card.details"/>
     </div>
   </section>
 </template>
@@ -12,16 +12,44 @@ import TheSearch from "@/components/TheSearch"
 import Card from "@/components/Card"
 
 export default {
+  methods: {
+    sliceDescription: function(description) { 
+
+      return description.length > 50 ? description.slice(0, 50) + '...' : description
+    }
+  },
   data() {
     return {
       cards: [
         {
           title: "Quick Sort",
-          description: "Sort Algorithm O(n lgn)"
+          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni. ",
+          details: [
+            {
+              key: "Time complexity",
+              value: "O(n lgn)"
+            },
+            {
+              key: "Space complexity",
+              value: "O(n)"
+            }
+          ],
+          likes: 75
         },
         {
           title: "Merge Sort",
-          description: "Sort Algorithm O(n)"
+          description: "Sort Algorithm O(n)",
+          details: [
+            {
+              key: "Time complexity",
+              value: "O(n lgn)"
+            },
+            {
+              key: "Space complexity",
+              value: "O(n)"
+            }
+          ],
+          likes: 10
         },
         {
           title: "BFS Algorithm",

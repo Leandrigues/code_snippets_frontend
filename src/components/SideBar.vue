@@ -51,7 +51,6 @@ export default {
   methods: {
     getIcon: function (categorie, index) {
       if(index == this.selected) {
-        // return `${categorie.icon}-selected.svg`
         return require(`../assets/${categorie.icon}-selected.svg`)
       }
       return require(`../assets/${categorie.icon}.svg`)
@@ -74,6 +73,7 @@ export default {
 .categories {
   height: 70%;
   font-family: 'Noto Sans', sans-serif;  
+  height: 600px;
   @apply flex flex-col justify-between;
 }
 

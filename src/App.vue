@@ -32,6 +32,6 @@ html, body {
 }
 
 .content {
-  @apply flex;
+  @apply flex h-full;
 }
 </style>
