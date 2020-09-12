@@ -2,7 +2,7 @@
   <section class="main-container">
     <TheSearch/>
     <div class="cards">
-      <Card v-for="card in cards" :key="card.title" :title="card.title" :description="sliceDescription(card.description)" :likes="card.likes" :details="card.details"/>
+      <Card v-for="card in cards" :key="card.title" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
     </div>
   </section>
 </template>
@@ -71,11 +71,12 @@ export default {
 
 <style>
 .main-container {
-  @apply px-32 pt-10 w-full h-full border-r;
+  @apply px-20 pt-10 w-full h-full border-r;
 }
 
 .cards {
   display: grid;
+  column-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   @apply mt-10
 }

@@ -23,6 +23,10 @@ export default {
 }
 </script>
 <style>
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   @apply m-0 p-0 h-full;
 }

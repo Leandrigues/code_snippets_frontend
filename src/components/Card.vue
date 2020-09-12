@@ -1,30 +1,32 @@
 <template>
-  <a href="" class="card-container">
-    <div class="information">
-      <div class="card-title">{{ title }}</div>
-      <div class="description">{{ description }}</div>
-
-      <div class="details-container">
-        <div class="details-key-container">
-          <span class="details-key" v-for="detail in details" :key="detail.key">{{ detail.key }}:</span>
-        </div>
-        <div class="details-value-container">
-          <span class="details-value" v-for="detail in details" :key="detail.value">{{ detail.value }}</span>
-        </div>
+  <a class="card-outside-container">
+    <a href="" class="card-container">
+      <div class="information">
+        <div class="card-title">{{ title }}</div>
+        <div class="description">{{ description }}</div>
       </div>
-    </div>
 
-    <div class="likes-container">
-      <img :src="like" class="like"/>
-      <div class="likes">{{ likes }}</div> 
-    </div>
-    <div class="tags"></div>
+      <div class="likes-container">
+        <img :src="like" />
+        <div class="likes">{{ likes }}</div> 
+      </div>
+    </a>
+    
+      <div class="tag-container">
+          <Tag name="JavaScript"/>
+          <Tag name="Java"/>
+          <Tag name="Python"/>
+          <Tag name="..."/>
+      </div>
   </a>
 </template>
 
 <script>
+import Tag from './Tag'
+
 export default {
   components: {
+    Tag
   },
   props: ["title", "description", "likes", "details"],
   data() {
@@ -38,14 +40,17 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
-.card-container {
-  font-family: 'Source Sans Pro', sans-serif;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
+.card-outside-container {
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
   border: solid 1px rgb(230, 230, 230);
   color: rgb(53, 53, 53);
-  @apply flex h-48 rounded mr-10 mb-10 py-3 px-4; 
+  @apply flex flex-col  py-3 px-4 h-56 w-full mb-10;
+}
+
+.card-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(53, 53, 53);
+  @apply flex w-full rounded; 
 }
 
 .card-title {
@@ -53,35 +58,31 @@ export default {
   @apply font-bold;
 }
 
-.description {
-  @apply w-3/4 mb-2 h-12;
+.description {   
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  @apply  mb-2 h-12 w-full;
 }
 
 .information {
-  width: 80%;
+  @apply h-full flex flex-col w-full;
 }
 
 .likes-container {
-  @apply flex flex-col h-full items-center justify-center
+  margin-left: auto;
+  @apply flex flex-col w-1/4 items-center justify-center
 }
 
 .likes {
   @apply font-bold text-lg;
 }
 
-.details-key {
-  @apply font-bold
-}
+.tag-container {
+  margin-top: auto;
 
-.details-value-container {
-  @apply flex flex-col
-}
-
-.details-key-container {
-  @apply flex flex-col;
-}
-
-.details-container {
-  @apply flex justify-between w-3/4
+  @apply flex justify-start w-full;
 }
 </style>
