@@ -4,10 +4,6 @@
       <div class="information">
         <div class="card-title">{{ title }}</div>
         <div class="description">{{ description }}</div>
-        <div class="details" v-for="detail in details" :key="detail.value">
-          <div class="detail-key">{{ detail.key }}</div>
-          <div class="detail-value">{{ detail.value }}</div>
-        </div>
       </div>
     </div>
 
@@ -49,7 +45,7 @@ export default {
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   border: solid 1px rgb(230, 230, 230);
   color: rgb(53, 53, 53);
-  @apply flex flex-col pt-3 px-4 h-64 w-full mb-10 rounded;
+  @apply flex flex-col py-3 px-4 h-64 w-full mb-10 rounded;
 }
 
 .card-container {
@@ -59,7 +55,7 @@ export default {
 }
 
 .card-title {
-  @apply font-bold text-xl;
+  @apply font-bold text-2xl;
 }
 
 .description {   
@@ -76,7 +72,7 @@ export default {
 }
 
 .card-bottom-container {
-  @apply flex w-full m-auto;
+  @apply flex w-full mt-auto;
 }
 
 .likes-container {
@@ -106,11 +102,12 @@ export default {
 /* Responsivity to the bottom of the card */
 @screen md {
   .tag-container {
-    @apply flex items-center justify-start w-full m-auto;
+    margin-top: auto;
+    @apply flex items-center justify-start w-full mt-auto;
   }
 
   .likes-container {
-  @apply flex flex-wrap items-center justify-end w-1/5;
+    @apply flex flex-wrap items-center justify-end w-1/5;
   }
 }
 

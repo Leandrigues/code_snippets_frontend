@@ -2,19 +2,18 @@
   <div class="main-container">
     <TheSearch/>
     <div class="cards">
-      <Card v-for="card in cards" :key="card.title" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
+      <CardDois v-for="card in cards" :key="card.title" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
     </div>
   </div>
 </template>
 
 <script>
 import TheSearch from "@/components/TheSearch"
-import Card from "@/components/Card"
+import CardDois from "@/components/CardDois"
 
 export default {
   methods: {
     sliceDescription: function(description) { 
-
       return description.length > 50 ? description.slice(0, 50) + '...' : description
     }
   },
@@ -23,7 +22,7 @@ export default {
       cards: [
         {
           title: "Quick Sort",
-          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni. ",
+          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
           details: [
             {
               key: "Time complexity",
@@ -84,7 +83,7 @@ export default {
   },
   components: {
     TheSearch,
-    Card
+    CardDois
   }
 }
 </script>

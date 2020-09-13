@@ -9,12 +9,9 @@ export default {
   props: ["name"],
   methods: {
     tagColorPick(name) {
-      if (name) {
-        return "#388697"
-      }
       switch(name) {
         case "JavaScript":
-          return "#ffda38"
+          return "rgb(255, 203, 32)"
         case "Java":
           return "#ff4a71"
         case "Python":
@@ -30,6 +27,7 @@ export default {
 <style>
 .tag {
   color: white;
+
   @apply font-bold text-base mr-2 px-3 py-1 rounded;
 }
 
