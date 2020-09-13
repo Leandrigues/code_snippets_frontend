@@ -5,6 +5,9 @@ module.exports = {
       colors: {
         mainNavyBlue: '#F87060'
       },
+      screens: {
+        'break-side': '900px'
+      }
     },
   },
   variants: {},

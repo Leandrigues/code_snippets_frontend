@@ -23,35 +23,42 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 
 .nav-container {
-  @apply flex justify-between items-center border-b w-full px-16;
-}
-
-.nav-section {
-  @apply flex w-full h-20 items-center;
-}
-
-.logo {
   font-family: 'Roboto Slab', serif;
-  @apply text-xl w-32;
+  @apply flex items-center justify-around py-3 border-b;
 }
 
-.sign-buttons-container {
-  @apply flex items-center justify-between w-56;
+@screen md {
+  .nav-container {
+    @apply flex justify-between items-center border-b w-full px-16 py-0;
+  }
+
+  .nav-section {
+    @apply flex w-full h-20 items-center;
+  }
+
+  .logo {
+    font-family: 'Roboto Slab', serif;
+    @apply text-xl w-32;
+  }
+
+  .sign-buttons-container {
+    @apply flex items-center justify-between w-56;
+  }
+
+  .sign-up-button {
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+  }
+
+  .sign-up-button:hover {
+    @apply bg-mainNavyBlue;
+  }
+
+  .sign-in-button {
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+    @apply cursor-pointer;
+  }
 }
 
-.sign-up-button {
-  font-family: 'Roboto Slab', serif;
-  outline: none;
-}
-
-.sign-up-button:hover {
-  @apply bg-mainNavyBlue;
-}
-
-.sign-in-button {
-  font-family: 'Roboto Slab', serif;
-  outline: none;
-
-  @apply cursor-pointer;
-}
 </style>

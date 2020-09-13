@@ -23,8 +23,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 .search-container {
-  width: 31.7%;
-  /* @apply w-1/4 */
+  @apply w-full my-5;
 }
 
 .search-form {
@@ -55,4 +54,5 @@ input:focus::placeholder {
 input::placeholder {
   font-style: italic;
 }
+
 </style>

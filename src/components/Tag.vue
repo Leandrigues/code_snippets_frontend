@@ -27,7 +27,7 @@ export default {
 <style>
 .tag {
   color: white;
-  @apply flex font-bold justify-center text-base mr-2 px-3 py-1 rounded;
+  @apply font-bold text-base mr-2 px-3 py-1 rounded;
 }
 
 </style>

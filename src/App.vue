@@ -25,14 +25,19 @@ export default {
 <style>
 * {
   box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-  @apply m-0 p-0 h-full;
+  @apply m-0 p-0 h-full w-full;
 }
 
 #app {
-  @apply h-full;
+  margin: 0;
+  padding: 0;
+  @apply h-full w-full;
 }
 
 .content {
