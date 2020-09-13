@@ -46,10 +46,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 .card-outside-container {
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   border: solid 1px rgb(230, 230, 230);
   color: rgb(53, 53, 53);
-  @apply flex flex-col pt-3 px-4 h-64 w-full mb-10;
+  @apply flex flex-col pt-3 px-4 h-64 w-full mb-10 rounded;
 }
 
 .card-container {
@@ -87,6 +87,7 @@ export default {
   @apply mr-2
 }
 .likes-amount {
+  color: rgb(155, 155, 155);
   @apply font-bold text-sm;
 }
 

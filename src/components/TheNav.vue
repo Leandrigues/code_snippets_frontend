@@ -5,7 +5,7 @@
     </div>
     <div class="sign-buttons-container">
       <v-btn text large class="sign-in-button">Sign in</v-btn>
-      <v-btn depressed large color="#F87060" class="white--text sign-up-button">Sign up</v-btn>
+      <v-btn depressed large color="#DF2935" class="white--text sign-up-button">Sign up</v-btn>
     </div>
   </nav>
 </template>

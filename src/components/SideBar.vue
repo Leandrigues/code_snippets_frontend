@@ -83,7 +83,7 @@ export default {
 
 
 .side-bar-container {
-  width: 20%;
+  width: 16%;
   @apply h-full border-r p-0;
 }
 
@@ -114,9 +114,9 @@ button:focus {
   }
 
   .side-bar-container {
-    min-width: 25rem;
+    min-width: 23rem;
     width: 20%;
-    @apply h-full border-r px-6 py-6;
+    @apply h-full border-r pl-6 py-6;
   }
 
   .categories {
@@ -138,7 +138,7 @@ button:focus {
   }
 
   .non-selected:hover{
-    background-color: rgb(7, 190, 184, 0.2)
+    background-color: rgb(223, 41, 53, 0.1)
   }
 
   .selected.categorie {

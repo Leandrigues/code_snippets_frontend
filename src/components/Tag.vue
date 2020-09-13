@@ -9,6 +9,9 @@ export default {
   props: ["name"],
   methods: {
     tagColorPick(name) {
+      if (name) {
+        return "#388697"
+      }
       switch(name) {
         case "JavaScript":
           return "#ffda38"
@@ -17,7 +20,7 @@ export default {
         case "Python":
           return "#4460ff"
         case "...":
-          return "#F87060"
+          return "#DF2935"
       }
     }
   }

@@ -23,7 +23,9 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 .search-container {
-  @apply w-full my-5;
+  @apply w-1/3 my-5;
+  width: calc(33% - 1rem);
+  min-width: 17.5rem;
 }
 
 .search-form {
@@ -39,12 +41,12 @@ export default {
   border: solid 1px lightgrey;
   font-family: 'Source Sans Pro', sans-serif;
   transition: border 0.3s;
-  @apply m-0 text-lg flex items-center pl-8 py-1 w-full rounded-md;
+  @apply m-0 text-lg flex items-center pl-8 py-1 w-full rounded;
 }
 
 .search-input:focus {
   outline:none;
-  border: solid 1px #3a6ead;
+  border: solid 1px #DF2935;
 }
 
 input:focus::placeholder {

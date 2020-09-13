@@ -92,7 +92,7 @@ export default {
 <style>
 .main-container {
   width: 80%;
-  @apply px-2 m-0; 
+  @apply px-6 m-0; 
 }
 
 .cards {
@@ -103,14 +103,13 @@ export default {
 
 @screen md {
   .main-container {
-    @apply px-20 pt-8 w-full h-full border-r;
+    @apply pr-10 pt-8 w-full h-full border-r;
   }
 
   .cards {
     display: grid;
     column-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
-    @apply mt-10
   }
 }
 
@@ -118,7 +117,7 @@ export default {
 
 @media (max-width: 1630px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
