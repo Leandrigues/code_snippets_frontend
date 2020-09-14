@@ -46,7 +46,7 @@ export default {
 
 .search-input:focus {
   outline:none;
-  border: solid 1px #DF2935;
+  border: solid 1px #3454D1;
 }
 
 input:focus::placeholder {

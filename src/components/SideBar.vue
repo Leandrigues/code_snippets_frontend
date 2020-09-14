@@ -3,11 +3,6 @@
     <head>
       <link href="assets/hamburgers.css" rel="stylesheet">
     </head>
-    <!-- <button class="hamburger hamburger--collapse" :class="hamburgerState" @click="flipHamburgerState" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button> -->
     <ul class="categories">
         <a @click="selected = i" href="#" class="categorie" v-for="(categorie, i) in  categories" :key="categorie.name" :class="{'selected': selected == i,   'non-selected': selected != i}">
           <img :src="getIcon(categorie, i)" alt="">
@@ -138,7 +133,7 @@ button:focus {
   }
 
   .non-selected:hover{
-    background-color: rgb(223, 41, 53, 0.1)
+    background-color: rgb(52, 84, 209, 0.1)
   }
 
   .selected.categorie {

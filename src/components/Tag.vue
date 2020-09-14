@@ -17,7 +17,7 @@ export default {
         case "Python":
           return "#4460ff"
         case "...":
-          return "#DF2935"
+          return "#3454D1"
       }
     }
   }
@@ -27,7 +27,6 @@ export default {
 <style>
 .tag {
   color: white;
-
   @apply font-bold text-base mr-2 px-3 py-1 rounded;
 }
 

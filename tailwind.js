@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainNavyBlue: '#DF2935'
+        mainNavyBlue: '#3454D1'
       },
       screens: {
         'break-side': '900px'

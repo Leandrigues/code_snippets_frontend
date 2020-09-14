@@ -41,8 +41,8 @@ export default {
   font-family: 'Roboto Mono', monospace;
   background-color: rgb(37, 37, 37);
   -webkit-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
--moz-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
+  -moz-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
+  box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
   @apply flex flex-col h-64 pb-4 w-full mb-10 rounded-md;
 }
 

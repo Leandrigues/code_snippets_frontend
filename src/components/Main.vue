@@ -77,7 +77,52 @@ export default {
               value: "O(n)"
             }
           ]
-        }
+        },
+        {
+          title: "Quick Sort",
+          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
+          details: [
+            {
+              key: "Time complexity",
+              value: "O(n lgn)"
+            },
+            {
+              key: "Space complexity",
+              value: "O(n)"
+            }
+          ],
+          likes: 75
+        },
+        {
+          title: "Quick Sort",
+          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
+          details: [
+            {
+              key: "Time complexity",
+              value: "O(n lgn)"
+            },
+            {
+              key: "Space complexity",
+              value: "O(n)"
+            }
+          ],
+          likes: 75
+        },
+        {
+          title: "Quick Sort",
+          description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
+          details: [
+            {
+              key: "Time complexity",
+              value: "O(n lgn)"
+            },
+            {
+              key: "Space complexity",
+              value: "O(n)"
+            }
+          ],
+          likes: 75
+        },
       ]
     }
   },
@@ -102,7 +147,7 @@ export default {
 
 @screen md {
   .main-container {
-    @apply pr-10 pt-8 w-full h-full border-r;
+    @apply pr-10 pt-8 w-full h-full;
   }
 
   .cards {
