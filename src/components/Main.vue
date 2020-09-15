@@ -2,14 +2,14 @@
   <div class="main-container">
     <TheSearch/>
     <div class="cards">
-      <CardDois v-for="card in cards" :key="card.title" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
+      <Card v-for="(card, i) in cards" :key="i" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
     </div>
   </div>
 </template>
 
 <script>
 import TheSearch from "@/components/TheSearch"
-import CardDois from "@/components/CardDois"
+import Card from "@/components/Card"
 
 export default {
   methods: {
@@ -19,6 +19,7 @@ export default {
   },
   data() {
     return {
+      selected: 0,
       cards: [
         {
           title: "Quick Sort",
@@ -128,46 +129,40 @@ export default {
   },
   components: {
     TheSearch,
-    CardDois
+    Card
   }
 }
 </script>
 
 <style>
 .main-container {
-  width: 80%;
-  @apply px-6 m-0; 
+  @apply px-6 m-0 w-4/5; 
 }
 
 .cards {
-  column-gap: 2rem;
-  grid-template-columns: 1fr;
-  @apply grid mt-10 w-full;
+  @apply grid col-gap-8 grid-cols-1 mt-10 w-full;
 }
 
 @screen md {
   .main-container {
-    @apply pr-10 pt-8 w-full h-full;
+    @apply pr-10 pt-4 w-full h-full;
   }
 
   .cards {
-    display: grid;
-    column-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    @apply grid col-gap-8 grid-cols-3;
   }
 }
 
 /* Responsivity to set cards per row */
-
 @media (max-width: 1630px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    @apply grid-cols-2
   }
 }
 
 @media (max-width: 1295px) {
   .cards {
-    grid-template-columns: 1fr;
+    @apply grid-cols-1
   }
 }
 </style>

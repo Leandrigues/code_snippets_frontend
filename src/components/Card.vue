@@ -1,29 +1,25 @@
 <template>
-  <a class="card-outside-container">
-    <div href="" class="card-container">
-      <div class="information">
-        <div class="card-title">{{ title }}</div>
-        <div class="description">{{ description }}</div>
-      </div>
+  <a class="card-container">
+    <div class="top-bar">
+      <div class="ball red-ball"></div>
+      <div class="ball yellow-ball"></div>
+      <div class="ball green-ball"></div>
     </div>
-
-    <div class="card-bottom-container">
-      <div class="tag-container">
-          <Tag name="JavaScript"/>
-          <Tag name="Java"/>
-          <Tag name="Python"/>
-          <Tag name="..."/>
-      </div>
-      <div class="likes-container">
-        <img class="likes-img" src="../assets/like.svg" alt="">
-        <div class="likes-amount">70</div>
-      </div>
+    <div class="information">
+      <div class="card-title">{{ title }}</div>
+      <div class="card-description">{{ description }}</div>
+    </div>
+    <div class="tag-container">
+      <Tag name="JavaScript"/>
+      <Tag name="Java"/>
+      <Tag name="Python"/>
+      <Tag name="..."/>
     </div>
   </a>
 </template>
 
 <script>
-import Tag from './Tag'
+import Tag from "./Tag"
 
 export default {
   components: {
@@ -32,83 +28,63 @@ export default {
   props: ["title", "description", "likes", "details"],
   data() {
     return {
-      like: require(`../assets/like.svg`)
+
     }
   }
 }
 </script>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
-
-.card-outside-container {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-  border: solid 1px rgb(230, 230, 230);
-  color: rgb(53, 53, 53);
-  @apply flex flex-col py-3 px-4 h-64 w-full mb-10 rounded;
-}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .card-container {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: rgb(53, 53, 53);
-  @apply flex w-full rounded; 
+  font-family: 'Roboto Mono', monospace;
+  -webkit-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
+  -moz-box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
+  box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.62);
+  @apply flex flex-col bg-navy-secondary h-64 pb-4 w-full mb-10 rounded-md;
 }
 
 .card-title {
-  @apply font-bold text-2xl;
+  @apply text-xl font-bold text-white;
 }
 
-.description {   
-  overflow: hidden;
+.ball {
+  height: 0.9rem;
+  width: 0.9rem;
+  @apply rounded-full;
+}
+
+.red-ball {
+  background-color: rgb(238, 89, 89);
+}
+
+.green-ball {
+  background-color: rgb(4, 199, 13);
+}
+
+.yellow-ball {
+  background-color: rgb(246, 212, 62);
+}
+
+.top-bar {
+  width: 6rem;
+  @apply flex items-start justify-around px-4 py-4 h-4 rounded-md bg-transparent;
+}
+
+.information {
+  @apply px-8 mt-4
+}
+
+.card-description {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  @apply  mb-1 h-12 w-full;
-}
-
-.information {
-  @apply h-full flex flex-col w-full;
-}
-
-.card-bottom-container {
-  @apply flex w-full mt-auto;
-}
-
-.likes-container {
-  @apply flex flex-wrap items-center justify-start w-full;
-}
-
-.likes-img {
-  @apply mr-2
-}
-.likes-amount {
-  color: rgb(155, 155, 155);
-  @apply font-bold text-sm;
-}
-
-.detail-key {
-  @apply font-bold text-base;
-}
-
-.detail-value {
-  @apply text-base;
+  @apply overflow-hidden text-white; 
 }
 
 .tag-container {
-  display: none;
+  @apply px-8 mt-auto;
 }
-
-/* Responsivity to the bottom of the card */
-@screen md {
-  .tag-container {
-    margin-top: auto;
-    @apply flex items-center justify-start w-full mt-auto;
-  }
-
-  .likes-container {
-    @apply flex flex-wrap items-center justify-end w-1/5;
-  }
-}
-
 </style>

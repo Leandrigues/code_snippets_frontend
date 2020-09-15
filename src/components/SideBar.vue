@@ -5,7 +5,7 @@
     </head>
     <ul class="categories">
         <a @click="selected = i" href="#" class="categorie" v-for="(categorie, i) in  categories" :key="categorie.name" :class="{'selected': selected == i,   'non-selected': selected != i}">
-          <img :src="getIcon(categorie, i)" alt="">
+          <img class="icon" :src="getIcon(categorie, i)" alt="">
           <p class="categorie-name">{{ categorie.name }}</p>
         </a>
     </ul>
@@ -79,7 +79,7 @@ export default {
 
 .side-bar-container {
   width: 16%;
-  @apply h-full border-r p-0;
+  @apply h-full p-0;
 }
 
 .categorie-name {
@@ -87,62 +87,59 @@ export default {
 }
 
 .categories {
-  height: 70%;
-  @apply flex flex-col justify-between items-center px-0 pt-6;
+  height: 570px;
+  @apply flex flex-col border-white justify-between items-center px-0 pt-6;
 }
 
 .selected.categorie {
-  color: white;
-  @apply bg-mainNavyBlue rounded-full;
+  @apply rounded-full bg-pink text-white;
 }
 
 .categorie {
-  @apply p-2
+  @apply p-2 text-white;
 }
+
 button:focus {
-  outline: none;
+  @apply outline-none;
 }
 
 @screen md {
+  .categories {
+    height: 800px;
+  }
   .categorie-name {
-    display: block;
+    @apply block;
   }
 
   .side-bar-container {
     min-width: 23rem;
-    width: 20%;
-    @apply h-full border-r pl-6 py-6;
+    @apply w-1/5 h-full pl-6 py-2;
   }
 
   .categories {
-    height: 70%;
     font-family: 'Noto Sans', sans-serif;  
-    height: 600px;
     @apply flex flex-col justify-between;
   }
 
   .categorie {
-    background-color: transparent;
     transition: background-color .3s;
-    @apply py-3 pl-5 flex items-center font-bold text-mainNavyBlue rounded-full w-11/12;
+    @apply py-3 pl-5 bg-transparent flex items-center font-bold rounded-full w-11/12;
   }
 
   .categorie-name {
-    padding: 0;
-    margin: 0;
+    @apply m-0;
   }
 
   .non-selected:hover{
-    background-color: rgb(52, 84, 209, 0.1)
+    background-color: rgb(233,69,96, 0.2);
   }
 
   .selected.categorie {
-    color: white;
-    @apply bg-mainNavyBlue rounded-full;
+    @apply rounded-full text-white;
   }
 
-  img {
-    @apply flex items-center mr-4
+  .icon {
+    @apply flex items-center mr-4;
   }
 }
 

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark-theme {
+  --bg-background-primarydark: rgb(71, 209, 255);
+  --bg-background-bgdark: rgb(54,54,54)
+}
+
+.light-theme {
+  --bg-background-primarylight: white;
+}

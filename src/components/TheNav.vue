@@ -4,8 +4,8 @@
       <div class="logo">CodeSnippets</div>
     </div>
     <div class="sign-buttons-container">
-      <v-btn text large class="sign-in-button">Sign in</v-btn>
-      <v-btn depressed large color="#3454D1" class="white--text sign-up-button">Sign up</v-btn>
+      <v-btn text large class="sign-in-button" color="white">Sign in</v-btn>
+      <v-btn depressed large color="#e94560" class="white--text sign-up-button">Sign up</v-btn>
     </div>
   </nav>
 </template>
@@ -24,21 +24,21 @@ export default {
 
 .nav-container {
   font-family: 'Roboto Slab', serif;
-  @apply flex items-center justify-around py-3 border-b;
+  @apply flex items-center justify-around py-3;
+}
+
+.logo {
+  font-family: 'Roboto Slab', serif;
+  @apply text-xl font-bold w-32 text-pink;
 }
 
 @screen md {
   .nav-container {
-    @apply flex justify-between items-center border-b w-full px-16 py-0;
+    @apply flex bg-navy justify-between items-center  w-full px-16 py-0;
   }
 
   .nav-section {
     @apply flex w-full h-20 items-center;
-  }
-
-  .logo {
-    font-family: 'Roboto Slab', serif;
-    @apply text-xl w-32;
   }
 
   .sign-buttons-container {
@@ -47,17 +47,12 @@ export default {
 
   .sign-up-button {
     font-family: 'Roboto Slab', serif;
-    outline: none;
-  }
-
-  .sign-up-button:hover {
-    @apply bg-mainNavyBlue;
+    @apply outline-none;
   }
 
   .sign-in-button {
     font-family: 'Roboto Slab', serif;
-    outline: none;
-    @apply cursor-pointer;
+    @apply cursor-pointer outline-none;
   }
 }
 

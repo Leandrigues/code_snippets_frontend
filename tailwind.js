@@ -1,10 +1,15 @@
 module.exports = {
   purge: [],
   theme: {
+    colors: {
+      'navy': '#1A1A2E',
+      'navy-secondary': '#16213E',
+      'pink': '#E94560',
+      'blue': '#0f3460',
+      'white': 'white',
+      'transparent': 'transparent',
+    },
     extend: {
-      colors: {
-        mainNavyBlue: '#3454D1'
-      },
       screens: {
         'break-side': '900px'
       }

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --search-icon-color: white;
+}
+
+.dark-theme {
+  --bg-background-primary: rgb(54, 54, 54);
+  --bg-background-secondary: rgb(73, 197, 255);
+}
+
+.light-theme {
+  --bg-background-primary: white;
+  --bg-background-secondary: rgb(50, 91, 226);
+
+}

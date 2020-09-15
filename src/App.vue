@@ -30,13 +30,15 @@ export default {
   padding: 0;
 }
 
-html, body {
+html, body {  
+  background-color: #1a1a2e;
   @apply m-0 p-0 h-full w-full;
 }
 
 #app {
   margin: 0;
   padding: 0;
+  background-color: #1a1a2e;
   @apply h-full w-full;
 }
 
