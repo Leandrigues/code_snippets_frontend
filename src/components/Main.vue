@@ -1,6 +1,5 @@
 <template>
   <div class="main-container">
-    <TheSearch/>
     <div class="cards">
       <Card v-for="(card, i) in cards" :key="i" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
     </div>
@@ -8,7 +7,6 @@
 </template>
 
 <script>
-import TheSearch from "@/components/TheSearch"
 import Card from "@/components/Card"
 
 export default {
@@ -128,7 +126,6 @@ export default {
     }
   },
   components: {
-    TheSearch,
     Card
   }
 }

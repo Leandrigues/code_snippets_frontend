@@ -31,7 +31,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 .search-container {
-  width: calc(33% - 1rem);
+  /* width: calc(33% - 1rem); */
+  width: 50%;
   @apply my-5;
 }
 
@@ -48,7 +49,7 @@ export default {
   border-bottom: solid 1px rgb(255, 255, 255);
   font-family: 'Source Sans Pro', sans-serif;
   transition: border 0.3s;
-  @apply flex items-center m-0 text-lg text-white pl-8 py-1 w-full;
+  @apply flex items-center m-0 text-lg text-white pl-8 py-1 w-full h-12;
 }
 
 .search-input:focus {

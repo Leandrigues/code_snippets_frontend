@@ -1,7 +1,7 @@
 <template>
-  <span class="tag" :style="{backgroundColor: tagColorPick(name)}">
+  <div class="tag" :style="{backgroundColor: tagColorPick(name)}">
     {{ name }}
-  </span>
+  </div>
 </template>
 
 <script>

@@ -1,10 +1,5 @@
 <template>
   <a class="card-container">
-    <div class="top-bar">
-      <div class="ball red-ball"></div>
-      <div class="ball yellow-ball"></div>
-      <div class="ball green-ball"></div>
-    </div>
     <div class="information">
       <div class="card-title">{{ title }}</div>
       <div class="card-description">{{ description }}</div>
@@ -85,6 +80,7 @@ export default {
 }
 
 .tag-container {
-  @apply px-8 mt-auto;
+  @apply flex px-8 mt-auto flex-wrap w-full h-8 justify-start;
+  overflow-y: hidden;
 }
 </style>

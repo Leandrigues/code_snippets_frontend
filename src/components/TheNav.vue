@@ -3,6 +3,7 @@
     <div class="nav-section">
       <div class="logo">CodeSnippets</div>
     </div>
+    <TheSearch/>
     <div class="sign-buttons-container">
       <v-btn text large class="sign-in-button" color="white">Sign in</v-btn>
       <v-btn depressed large color="#e94560" class="white--text sign-up-button">Sign up</v-btn>
@@ -11,9 +12,11 @@
 </template>
 
 <script>
+import TheSearch from './TheSearch'
 
 export default {
   components: {
+    TheSearch
   }
 }
 </script>
@@ -38,7 +41,7 @@ export default {
   }
 
   .nav-section {
-    @apply flex w-full h-20 items-center;
+    @apply flex h-20 items-center;
   }
 
   .sign-buttons-container {
