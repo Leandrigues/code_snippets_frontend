@@ -1,16 +1,18 @@
 <template>
-  <a class="card-container">
-    <div class="information">
-      <div class="card-title">{{ title }}</div>
-      <div class="card-description">{{ description }}</div>
-    </div>
-    <div class="tag-container">
-      <Tag name="JavaScript"/>
-      <Tag name="Java"/>
-      <Tag name="Python"/>
-      <Tag name="..."/>
-    </div>
-  </a>
+  <router-link to="/snippet">
+      <a class="card-container">
+        <div class="information">
+          <div class="card-title">{{ title }}</div>
+          <div class="card-description">{{ description }}</div>
+        </div>
+        <div class="tag-container">
+          <Tag name="JavaScript"/>
+          <Tag name="Java"/>
+          <Tag name="Python"/>
+          <Tag name="..."/>
+        </div>
+      </a>
+  </router-link>
 </template>
 
 <script>

@@ -1,7 +1,9 @@
 <template>
   <nav class="nav-container">
     <div class="nav-section">
-      <div class="logo">CodeSnippets</div>
+      <router-link to="/">
+        <div class="logo">CodeSnippets</div>
+      </router-link>
     </div>
     <TheSearch/>
     <div class="sign-buttons-container">
@@ -37,7 +39,7 @@ export default {
 
 @screen md {
   .nav-container {
-    @apply flex bg-navy justify-between items-center  w-full px-16 py-0;
+    @apply flex bg-navy justify-between items-center mt-2 w-full px-16 py-0;
   }
 
   .nav-section {

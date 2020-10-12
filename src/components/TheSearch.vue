@@ -49,7 +49,7 @@ export default {
   border-bottom: solid 1px rgb(255, 255, 255);
   font-family: 'Source Sans Pro', sans-serif;
   transition: border 0.3s;
-  @apply flex items-center m-0 text-lg text-white pl-8 py-1 w-full h-12;
+  @apply flex font-bold items-center m-0 text-lg text-white pl-8 py-1 w-full h-12;
 }
 
 .search-input:focus {
