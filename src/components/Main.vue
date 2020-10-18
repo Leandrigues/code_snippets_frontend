@@ -11,7 +11,6 @@ import axios from 'axios';
 import Card from "@/components/Card"
 
 export default {
-
   methods: {
     sliceDescription: function(description) { 
       return description.length > 50 ? description.slice(0, 50) + '...' : description
@@ -20,120 +19,15 @@ export default {
   data() {
     return {
       selected: 0,
-      cards: axios.get('http://localhost:3000/snippets'),
-      // cards: [
-      //   {
-      //     title: "Quick Sort",
-      //     description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ],
-      //     likes: 75
-      //   },
-      //   {
-      //     title: "Merge Sort",
-      //     description: "Sort Algorithm O(n)",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ],
-      //     likes: 10
-      //   },
-      //   {
-      //     title: "BFS Algorithm",
-      //     description: "Breadt-first search in graphs algorithm",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ]
-      //   },
-      //   {
-      //     title: "Binary Search Algorithm",
-      //     description: "O(lg n) algorithm to search an item in an ordered array",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ]
-      //   },
-      //   {
-      //     title: "Quick Sort",
-      //     description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ],
-      //     likes: 75
-      //   },
-      //   {
-      //     title: "Quick Sort",
-      //     description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ],
-      //     likes: 75
-      //   },
-      //   {
-      //     title: "Quick Sort",
-      //     description: "Sort Algorithm O(n lgn) Lorem ipsum dolor sit amet consectetur, adipisicing elit Veniam placeat cupiditate perspiciatis ratione aperiam. In dolore excepturi ad rem magni",
-      //     details: [
-      //       {
-      //         key: "Time complexity",
-      //         value: "O(n lgn)"
-      //       },
-      //       {
-      //         key: "Space complexity",
-      //         value: "O(n)"
-      //       }
-      //     ],
-      //     likes: 75
-      //   },
-      // ]
+      cards: [],
     }
   },
   components: {
     Card
   },
   created() {
-    this.cards = axios.get('http://localhost:3000/snippets').then((res) => {
-      console.log(res.data)
+    axios.get('http://localhost:3000/snippets').then((res) => {
+      this.cards = res.data
     })
   }
 }
