@@ -31,9 +31,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 .search-container {
-  /* width: calc(33% - 1rem); */
-  width: 50%;
-  @apply my-5;
+  width: calc(33% - 1rem);
+}
+
+.search-container:placeholder {
+  opacity: 0;
 }
 
 .search-form {

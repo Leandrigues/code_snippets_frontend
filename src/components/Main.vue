@@ -1,5 +1,6 @@
 <template>
   <div class="main-container">
+    <TheNav/>
     <div class="cards">
       <Card v-for="(card, i) in cards" :key="i" :title="card.title" :description="card.description" :likes="card.likes" :details="card.details"/>
     </div>
@@ -9,6 +10,8 @@
 <script>
 import axios from 'axios';
 import Card from "@/components/Card"
+import TheNav from "@/components/TheNav"
+
 
 export default {
   methods: {
@@ -23,7 +26,8 @@ export default {
     }
   },
   components: {
-    Card
+    Card,
+    TheNav
   },
   created() {
     axios.get('http://localhost:3000/snippets').then((res) => {
@@ -35,11 +39,11 @@ export default {
 
 <style>
 .main-container {
-  @apply px-6 m-0 w-4/5; 
+  @apply px-6 m-0 w-full;
 }
 
 .cards {
-  @apply grid col-gap-8 grid-cols-1 mt-4 w-full;
+  @apply grid col-gap-8 grid-cols-1 mt-10 w-full;
 }
 
 @screen md {

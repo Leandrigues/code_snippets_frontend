@@ -1,10 +1,5 @@
 <template>
   <nav class="nav-container">
-    <div class="nav-section">
-      <router-link to="/">
-        <div class="logo">CodeSnippets</div>
-      </router-link>
-    </div>
     <TheSearch/>
     <div class="sign-buttons-container">
       <v-btn text large class="sign-in-button" color="white">Sign in</v-btn>
@@ -29,17 +24,20 @@ export default {
 
 .nav-container {
   font-family: 'Roboto Slab', serif;
-  @apply flex items-center justify-around py-3;
+  @apply flex items-center justify-between justify-around pt-2;
 }
 
-.logo {
-  font-family: 'Roboto Slab', serif;
-  @apply text-xl font-bold w-32 text-pink;
+.sign-up-button {
+  display: none;
+}
+
+button.sign-in-button {
+  padding: 0 !important;
 }
 
 @screen md {
   .nav-container {
-    @apply flex bg-navy justify-between items-center mt-2 w-full px-16 py-0;
+    @apply flex bg-navy justify-between items-center mt-2 w-full py-0;
   }
 
   .nav-section {
@@ -52,6 +50,7 @@ export default {
 
   .sign-up-button {
     font-family: 'Roboto Slab', serif;
+    display: block;
     @apply outline-none;
   }
 
